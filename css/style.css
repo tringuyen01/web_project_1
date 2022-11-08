@@ -70,10 +70,16 @@ header{
   height: 90px;
 }
 header .container{
+  position: relative;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+header .menu{
+  position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 header .menu ul{
   display: flex;
@@ -389,16 +395,19 @@ header .btn .--yellow{
   font-weight: bold;
   font-family: mr;
   line-height: 24px;
+  position: relative;
 }
-.works .listbox .box .btn .line{
-  border-bottom: 3px solid black;
-  margin-left: 20px;
-  margin-right: 5px;
+.works .listbox .box .btn a::after{
+  content: "";
+  position: absolute;
+  display: block;
+  height: 3px;
+  background: #3f3f3f;
+  left: 0;
+  width: 100%;
 }
-.works .listbox .box:hover .btn .line{
-  border-bottom: 3px solid white;
-  margin-left: 20px;
-  margin-right: 5px;
+.works .listbox .box:hover .btn a::after{
+  background: #ffffff;
 }
 .services{
   padding-bottom: 80px;
@@ -414,9 +423,11 @@ header .btn .--yellow{
 }
 .services .iteam{
   display: flex;
+  justify-content: space-between;
 }
 .services .iteam .listtext{
-  margin: auto auto auto 130px;
+  flex-basis: 40%;
+  margin: auto 0;
 }
 .services .iteam .listtext .text{
   margin-bottom: 70px;
@@ -609,7 +620,7 @@ header .btn .--yellow{
   margin-bottom: 30px;
 }
 .touch .field .info .forminput input[type=text]{
-  width: 100%;
+  flex:1;
   border: none;
   border-bottom: 1px solid #c0c7d0;
   padding-bottom: 15px;
