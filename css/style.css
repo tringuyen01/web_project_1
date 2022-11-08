@@ -190,15 +190,18 @@ header .btn .--yellow{
   font-size: 15px;
   font-family: mr;
 }
-.find .scroll{
+.find .img-scroll{
   position: absolute;
-  bottom: 30px;
+  bottom: 70px;
 }
-.find .scroll h5{
+.find .scroll {
+  position: absolute;
+  left: -10px;
   font-size: 12px;
   font-family: mr;
   color: #818181;
   transform: rotate(-90deg);
+  bottom: 140px;
 }
 .company{
   padding: 90px 0;
