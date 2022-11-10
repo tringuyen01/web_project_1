@@ -794,6 +794,9 @@ footer .bot p{
     margin: 0;
     font-size: 14px;
   }
+  .company .listbox{
+    justify-content: center;
+  }
   .company .listbox .box{
     height: 150px;
     width: 150px;
