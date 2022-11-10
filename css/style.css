@@ -695,19 +695,21 @@ footer .top .textbox h2{
 }
 footer .top .subscribe{
   position: absolute;
-  width: 475px;
+  height: 100%;
+  width: 50%;
   right: 0;
   bottom: 0;
 }
 footer .top .subscribe input[type=text]{
-  position: relative;
   width: 100%;
-  padding: 25px 30px;
+  height: 100%;
+  padding: 0 60px 0 30px;
 }
-footer .top .subscribe a{
-  position: absolute;
-  right: 30px;
-  bottom: 25px;
+footer .top .subscribe .sub{
+  height: 100%;
+}
+footer .top .subscribe .sub a{
+  margin: auto -55px;
 }
 footer .line{
   border-bottom: 1px solid #ffffff;
@@ -796,6 +798,7 @@ footer .bot p{
   }
   .company .listbox{
     justify-content: center;
+    margin-top: 10%;
   }
   .company .listbox .box{
     height: 150px;
@@ -849,8 +852,17 @@ footer .bot p{
     padding: 10%;
     width: 100%;
   }
+  footer .top{
+    display: flex;
+    flex-direction: column;
+  }
   footer .top .subscribe{
-    display: none;
+    position: inherit;
+    width: 100%;
+  }
+  footer .top .subscribe .sub{
+    height: 70px;
+    margin-top: 10%;
   }
   footer .bot,footer .bot .luxestate,
   footer .bot .cpn,footer .bot .product,
