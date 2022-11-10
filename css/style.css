@@ -861,4 +861,7 @@ footer .bot p{
   footer{
     padding: 60px 30px;
   }
+  .touch .field .info{
+    max-width: 100%;
+  }
 }
