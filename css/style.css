@@ -125,12 +125,11 @@ header .btn .--yellow{
   height:calc(100vh - 90px);
 }
 .find h1{
-  position: absolute;
   font-size: 61.64px;
-  max-width: calc(var(--max-width)*6.5/12);
+  max-width: 55%;
   font-family: mr;
   font-weight: bold;
-  margin-top: 150px;
+  padding-top: 150px;
 }
 .find .contact{
   display: grid;
@@ -168,18 +167,20 @@ header .btn .--yellow{
 }
 .find .search{
   display: flex;
-  position: absolute;
-  top: calc(100%/2);
+  margin-top: 60px;
+  width: 50%;
 }
 .find .search input[type=text]{
   border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  background-image: url(../img/search-luxestate.png);
-  background-size: 15px;
-  background-repeat: no-repeat;
-  background-position: 25px 25px;
-  border: none;
-  padding: 25px 150px 25px 55px;
+    border-bottom-left-radius: 5px;
+    background-image: url(../img/search-luxestate.png);
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: 25px 25px;
+    border: none;
+    padding: 0 50px;
+    width: 100%;
+    height: 100%;
 }
 .find .search a{
   border-top-right-radius: 5px;
@@ -209,7 +210,7 @@ header .btn .--yellow{
 .company .container{
   display: flex;
   flex-wrap: wrap;
-  gap: 130px;
+  justify-content: space-between;
 }
 .company .textbox .heading{
   max-width: 310px;
@@ -341,7 +342,6 @@ header .btn .--yellow{
  display: flex;
  align-items: center;
  justify-content: space-between;
- gap: 30px;
 }
 .works .listbox .box{
   padding: 45px;
@@ -515,8 +515,7 @@ header .btn .--yellow{
 }
 .location .listblock .block{
   display: flex;
-  flex-wrap: wrap;
-  gap: 120px;
+  justify-content: space-between;
   padding-bottom: 65px;
 }
 .location .listblock .block .image{
@@ -546,8 +545,8 @@ header .btn .--yellow{
   margin-left: 25px;
 }
 .location .listblock .block .text{
-  margin: auto;
-  max-width: calc(100%/2 - 120px);
+  margin: auto 0;
+  width: 40%;
 }
 .location .listblock .block .text h3{
   margin-bottom: 40px;
@@ -751,4 +750,115 @@ footer .bot p{
   font-size: 13px;
   font-family: mr;
   margin-bottom: 20px;
+}
+/*Mobile*/
+@media only screen and (max-width: 46.1875em){
+  header .menu ul{
+    display: none;
+  }
+  header .btn {
+    height: 85%;
+    width: 50%;
+    padding: 0;
+  }
+  header .btn a{
+    padding: 10%;
+  }
+  .find h1{
+    font-size: 35px;
+    max-width: 100%;
+    padding-top: 50%;
+  }
+  .find .search {
+    width: 100%;
+  }
+  .find .contact{
+    width: 100%;
+    justify-content: space-between;
+  }
+  .find .contact .phone{
+    width: 115%;
+  }
+  .find .contact .phone h6{
+    margin: 0;
+    font-size: 14px;
+
+  }
+  .find .contact .location{
+    width: 115%;
+  }
+  .find .contact .location img{
+    margin: 0;
+  }
+  .find .contact .location h6{
+    margin: 0;
+    font-size: 14px;
+  }
+  .company .listbox .box{
+    height: 150px;
+    width: 150px;
+  }
+  .appartments .listbox .box{
+    width: 100%;
+  }
+  .works .listbox{
+    flex-direction: column;
+  }
+  .services .textbox p{
+    max-width: 100%;
+  }
+  .services .iteam{
+    flex-direction: column;
+  }
+  .services .iteam img{
+    width: 100%;
+    margin-bottom: 10%;
+  }
+  .meet .textbox p{
+    max-width: 100%;
+  }
+  .meet .listbox .box{
+    width: 100%;
+  }
+  .location .listblock .block{
+    flex-direction: column;
+  }
+  .location .listblock .block .text{
+    width: 100%;
+  }
+  .location .listblock .block .image .img{
+    width: 100%;
+  }
+  .location .listblock .block .image .btn{
+    width: calc(100% - 35px);
+  }
+  .location .listblock .block .text{
+    margin-top: 10%;
+  }
+  .touch img{
+    display: none;
+  }
+  .touch .field .textbox p{
+    max-width: 100%;
+  }
+  .touch .btn{
+    text-align: center;
+    padding: 10%;
+    width: 100%;
+  }
+  footer .top .subscribe{
+    display: none;
+  }
+  footer .bot,footer .bot .luxestate,
+  footer .bot .cpn,footer .bot .product,
+  footer .bot .renting{
+    position: inherit;
+    margin-top: 10%;
+  }
+  footer .bot{
+    flex-direction: column;
+  }
+  footer{
+    padding: 60px 30px;
+  }
 }
